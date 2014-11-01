@@ -25,7 +25,7 @@ That took 7,432 microseconds or **7.4 milliseconds**!
 
 ## Running a large number of processes (260k+)
 
-Simply start iex with the following command:
+The Erlang VM attempts to protect you from runaway process creation. In a real world scenario, this protects from unnecessarily using up too many resources. To override this behavior, we have to set that number higher. Simply start iex with the following command:
 
     iex -erl "+P 10000000" -S mix
 
